@@ -1,0 +1,50 @@
+{
+  "name": "@spark-build/web-utils",
+  "version": "0.0.0",
+  "description": "基础工具库",
+  "author": "atzcl0310@gmail.com",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "types"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "np": {
+    "yarn": false
+  },
+  "scripts": {
+    "build": "yarn father-build build",
+    "publishPackage": "yarn build && np --no-cleanup --yolo --any-branch",
+    "prepublishPackage": "yarn build && np --no-cleanup --yolo --no-publish --any-branch"
+  },
+  "devDependencies": {
+    "@spark-build/lint": "^0.0.2",
+    "@types/enzyme": "^3.10.8",
+    "@types/file-saver": "^2.0.1",
+    "@types/jest": "^26.0.15",
+    "@types/react": "^16.9.55",
+    "@types/react-dom": "^16.9.9",
+    "@types/warning": "^3.0.0",
+    "coveralls": "^3.1.0",
+    "create-react-class": "^15.7.0",
+    "cross-env": "^7.0.2",
+    "enzyme": "^3.11.0",
+    "father-build": "^1.18.5",
+    "np": "^7.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "file-saver": "^2.0.2"
+  }
+}
