@@ -8,3 +8,4 @@ export * from './regex';
 export * from './rules';
 export * from './algorithm';
 export * from './money';
+export * from './math';
