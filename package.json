@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "typings": "lib/index.d.ts",
+  "typings": "es/index.d.ts",
   "files": [
     "dist",
     "lib",
@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
+    "bignumber.js": "^9.0.1",
     "file-saver": "^2.0.5"
   }
 }
