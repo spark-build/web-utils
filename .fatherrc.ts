@@ -5,7 +5,7 @@ export default {
     eslint: true,
     prettier: true,
   },
-  disableTypeCheck: true,
+  disableTypeCheck: false,
   // https://github.com/umijs/father#runtimehelpers
   runtimeHelpers: true,
   typescriptOpts: {
