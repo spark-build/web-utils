@@ -39,3 +39,19 @@ export const stringLength = (input: string) => stripAnsi(input).replace(astralRe
 // 获取长度
 export const getLength = (value: any) =>
   isStr(value) ? stringLength(value) : value ? value.length : 0;
+
+/**
+ * @see https://devblogs.microsoft.com/typescript/announcing-typescript-4-1-beta/#key-remapping-mapped-types
+ * @see https://stackoverflow.com/questions/56415826/is-it-possible-to-precisely-type-invert-in-typescript/57726844#57726844
+ *
+ * @example { a: 'a1', b: 'b1' } ===> { a1: 'a', b1: 'b' }
+ */
+export function invertObject<T extends Record<PropertyKey, PropertyKey>>(
+  obj: T,
+): {
+  [K in keyof T as T[K]]: K;
+};
+
+export function invertObject(obj: any) {
+  return Object.keys(obj).reduce((p, k) => ({ ...p, [obj[k]]: Number(k) }), {});
+}
