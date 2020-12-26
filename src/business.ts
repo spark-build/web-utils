@@ -3,5 +3,7 @@
  *
  * @param values
  */
-export const transformToSelectOptions = (values: AnyObject) =>
-  Object.keys(values).map((value) => ({ label: values[value], value }));
+export const transformToSelectOptions = (
+  values: AnyObject,
+  transfer = Number as typeof Number | typeof String | typeof Boolean,
+) => Object.keys(values).map((value) => ({ label: values[value], value: transfer(value) }));
